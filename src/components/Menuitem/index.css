@@ -57,6 +57,9 @@
   .vc,.nvc{
     margin-right: 15px;
   }
+  .cal{
+    margin-right: 40px;
+  }
 }
 
 .dishcon {
@@ -135,6 +138,7 @@
   text-decoration: normal;
   color: #1976e0;
 }
+
 
 
 
