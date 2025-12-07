@@ -98,7 +98,9 @@ class Menu extends Component {
     const { dishes } = umenu || { dishes: [] };
     const fdishes = dishes.map((di) => this.formatMenuItem(di));
     return isloading ? (
+      <div className="lcon">
       <TailSpin className="bgc" color="#00BFFF" height={50} width={50} />
+      </div>
     ) : (
       <div className="bgc">
         <div className="tcon">
@@ -132,3 +134,4 @@ class Menu extends Component {
 }
 
 export default Menu;
+
