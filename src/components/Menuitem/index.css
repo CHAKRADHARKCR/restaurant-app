@@ -52,7 +52,11 @@
   }
   .hcon{
     width: 65%;
+    justify-content: flex-start;
 }
+  .vc,.nvc{
+    margin-right: 15px;
+  }
 }
 
 .dishcon {
@@ -131,6 +135,7 @@
   text-decoration: normal;
   color: #1976e0;
 }
+
 
 
 
