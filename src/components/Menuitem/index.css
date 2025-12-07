@@ -46,7 +46,7 @@
 }
 
 @media (min-width: 576px){
-  .hcon,.h2con{
+  .h2con{
     justify-content: flex-end;
     align-items: center;
   }
@@ -131,5 +131,6 @@
   text-decoration: normal;
   color: #1976e0;
 }
+
 
 
