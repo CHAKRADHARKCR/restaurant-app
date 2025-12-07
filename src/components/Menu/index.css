@@ -5,6 +5,13 @@
   flex-direction: column;
 }
 
+.lcon{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tcon {
   height: 8vh;
   padding: 15px;
@@ -105,3 +112,4 @@
   padding: 0px;
   overflow-y: auto;
 }
+
