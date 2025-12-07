@@ -1,0 +1,107 @@
+.bgc {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tcon {
+  height: 8vh;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rh {
+  font-size: 25px;
+  color: black;
+  font-family: "Roboto";
+}
+
+.ccon {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.op {
+  font-size: 18px;
+  font-family: "Roboto";
+  color: #705a5d;
+  margin-right: 15px;
+}
+
+.cartcon {
+  display: flex;
+  width: 50px;
+}
+
+.cart {
+  position: relative;
+  font-size: 30px;
+}
+
+.tqty {
+  position: absolute;
+  color: white;
+  background-color: orangered;
+  padding: 2px 6px 2px 6px;
+  border: 0px solid;
+  border-radius: 50%;
+  font-size: 15px;
+  top: 0;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.cul {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+  width: 100%;
+  overflow-x: auto;
+  border: 0px;
+  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.5),
+    0 5px 5px -5px rgba(0, 0, 0, 0.5);
+}
+
+.cli {
+  margin-right: 10px;
+  padding: 0px;
+}
+
+.sc {
+  height: 100px;
+  width: 250px;
+  border: 0px;
+  background-color: transparent;
+  padding: 15px;
+  color: #f00e2c;
+  font-size: 22px;
+  font-family: "Roboto";
+  border-bottom: 1px solid #f00e2c;
+  cursor: pointer;
+}
+
+.nsc {
+  height: 100px;
+  width: 250px;
+  border: 0px;
+  background-color: transparent;
+  padding: 15px;
+  color: black;
+  font-size: 22px;
+  font-family: "Roboto";
+  cursor: pointer;
+}
+
+.mul {
+  list-style-type: none;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0px;
+  overflow-y: auto;
+}
