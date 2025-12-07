@@ -45,6 +45,15 @@
   width: 40%;
 }
 
+@media (min-width: 576px){
+  .hcon,.h2con{
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .hcon{
+    width: 65%;
+}
+
 .dishcon {
   width: 65%;
   height: 100%;
@@ -87,6 +96,7 @@
   border: 0px;
   background-color: transparent;
   color: white;
+  cursor: pointer;
 }
 
 .qty {
@@ -120,3 +130,4 @@
   text-decoration: normal;
   color: #1976e0;
 }
+
