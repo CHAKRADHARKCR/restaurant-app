@@ -139,6 +139,33 @@
   color: #1976e0;
 }
 
+@media (max-width: 530px) {
+  .hcon {
+    width: 46%;
+  }
+
+  .h2con {
+    width: 46%;
+  }
+
+  .dimg {
+    width: 50%;
+    height: 75px;
+  }
+
+  .dh,
+  .cal {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .dd {
+    font-size: 14px;
+  }
+}
 
 
 
