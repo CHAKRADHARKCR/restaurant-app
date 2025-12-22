@@ -30,6 +30,7 @@ class Menu extends Component {
     restaurantName: "",
     activeCat: "11",
     tqty: 0,
+    cart: {},
   };
 
   componentDidMount() {
@@ -64,16 +65,21 @@ class Menu extends Component {
     this.setState({ activeCat });
   };
 
-  oiq = () => {
-    this.setState((ps) => ({ tqty: ps.tqty + 1 }));
-  };
+  oiq = dishId =>
+    this.setState(ps => ({
+      tqty: ps.tqty + 1,
+      cart: {...ps.cart, [dishId]: (ps.cart[dishId] || 0) + 1},
+    }))
 
-  odq = () => {
-    const { tqty } = this.state;
+  odq = dishId => {
+    const {tqty} = this.state
     if (tqty > 0) {
-      this.setState((ps) => ({ tqty: ps.tqty - 1 }));
+      this.setState(ps => ({
+        tqty: ps.tqty - 1,
+        cart: {...ps.cart, [dishId]: (ps.cart[dishId] || 0) - 1},
+      }))
     }
-  };
+  }
 
   getdetails = async () => {
     const url =
@@ -92,7 +98,7 @@ class Menu extends Component {
   };
 
   render() {
-    const { isloading, restaurantName, menu, activeCat, tqty } = this.state;
+    const { isloading, restaurantName, menu, activeCat, tqty, cart } = this.state;
     const fmenu = menu.map((ci) => this.formatCat(ci));
     const umenu = fmenu.find((ci) => ci.menuCategoryId === activeCat);
     const { dishes } = umenu || { dishes: [] };
@@ -125,7 +131,7 @@ class Menu extends Component {
         </ul>
         <ul className="mul">
           {fdishes.map((di) => (
-            <Menuitem key={di.dishId} di={di} oiq={this.oiq} odq={this.odq} />
+            <Menuitem key={di.dishId} di={di} oiq={this.oiq} odq={this.odq} qty={cart[di.dishId} || 0} />
           ))}
         </ul>
       </div>
@@ -134,4 +140,5 @@ class Menu extends Component {
 }
 
 export default Menu;
+
 
