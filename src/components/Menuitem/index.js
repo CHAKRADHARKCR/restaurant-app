@@ -1,27 +1,10 @@
 import "./index.css";
-import { Component } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-class Menuitem extends Component {
-  state = { qty: 0 };
-
-  oi = () => {
-    const { oiq } = this.props;
-    this.setState((ps) => ({ qty: ps.qty + 1 }), oiq);
-  };
-
-  od = () => {
-    const { qty } = this.state;
-    if (qty > 0) {
-      const { odq } = this.props;
-      this.setState((ps) => ({ qty: ps.qty - 1 }), odq);
-    }
-  };
-
-  render() {
-    const { qty } = this.state;
-    const { di } = this.props;
-    const {
+const Menuitem = props => {
+  const {oiq, odq, qty, di} = props
+  const {
+      dishId,
       dName,
       dPrice,
       dimg,
@@ -32,6 +15,16 @@ class Menuitem extends Component {
       type,
       addonCat,
     } = di;
+
+  oi = () => {
+    oiq(dishId)
+  };
+
+  od = () => {
+    if (qty > 0) {
+      odq(dishId)
+    }
+  };
 
     const dt = type === 2 ? "veg" : "nveg";
     const dtc = type === 2 ? "vc" : "nvc";
@@ -50,11 +43,11 @@ class Menuitem extends Component {
             <p className="dd">{description}</p>
             {availability ? (
               <div className="qcon">
-                <button type="button" className="qbtn" onClick={this.oi}>
+                <button type="button" className="qbtn" onClick={oi}>
                   <FaPlus />
                 </button>
                 <p className="qty">{qty}</p>
-                <button type="button" className="qbtn" onClick={this.od}>
+                <button type="button" className="qbtn" onClick={od}>
                   <FaMinus />
                 </button>
               </div>
@@ -73,6 +66,6 @@ class Menuitem extends Component {
       </li>
     );
   }
-}
 
 export default Menuitem;
+
