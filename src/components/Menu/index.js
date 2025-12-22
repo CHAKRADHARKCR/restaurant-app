@@ -131,7 +131,7 @@ class Menu extends Component {
         </ul>
         <ul className="mul">
           {fdishes.map((di) => (
-            <Menuitem key={di.dishId} di={di} oiq={this.oiq} odq={this.odq} qty={cart[di.dishId} || 0} />
+            <Menuitem key={di.dishId} di={di} oiq={this.oiq} odq={this.odq} qty={cart[di.dishId] || 0} />
           ))}
         </ul>
       </div>
@@ -140,5 +140,6 @@ class Menu extends Component {
 }
 
 export default Menu;
+
 
 
